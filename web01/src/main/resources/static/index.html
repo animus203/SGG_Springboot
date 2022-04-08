@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎</title>
+</head>
+<body>
+<h1>Ludens welcome</h1>
+测试Rest风格，需要手动开启配置！
+<form action="/user" method="get">
+    <input value="REST-GET 提交" type="submit"/>
+</form>
+<form action="/user" method="post">
+    <input value="REST-POST 提交" type="submit"/>
+</form>
+<form action="/user" method="post">
+    <input name="_method" type="hidden" value="DELETE">
+    <input value="REST-DELETE 提交" type="submit"/>
+</form>
+<form action="/user" method="post">
+    <input name="_method" type="hidden" value="PUT">
+    <input value="REST-PUT 提交" type="submit"/>
+</form>
+
+测试基本注解：
+
+<ul>
+    <li>@PathVariable   (路径变量)</li>
+    <a herf="http://localhost:8080/car/1/owner/zhangsam?age=18">car/{id}/owner/{username}</a>
+
+</ul>
+<form action="/save"  method="post">
+    测试@RequestBody获取数据
+    用户名：<input name="username"/>
+    密码：<input name="pwd">
+    <input type="submit" value="提交">
+</form>
+<hr/>
+测试复杂类型： <hr/>
+<form action="/saveuser" method="post">
+    姓名：<input name="userName" value="zhangsan"/><br/>
+    年龄：<input name="age" value="18"/><br/>
+    生日：<input name="birth" value="2019/12/10"/><br/>
+    宠物姓名：<input name="pet.name" value="tom"/><br/>
+    宠物年龄：<input name="pet.age" value="5"/><br/>
+    <input type="submit" value="保存">
+</form>
+</body>
+</html>

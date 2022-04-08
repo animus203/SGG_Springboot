@@ -1,0 +1,14 @@
+#以后访问静态资源需要添加访问前缀
+#spring:
+#  mvc:
+#    static-path-pattern: /res/**
+
+  #改变加载静态资源的路径
+  #resources:
+    #static-locations: classpath:/haha
+
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true

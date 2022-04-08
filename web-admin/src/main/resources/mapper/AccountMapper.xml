@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--绑定一个对应的mapper接口-->
+<mapper namespace="com.ludens.webadmin.mapper.AccountMapper">
+    <select id="getAcct" resultType="com.ludens.webadmin.bean.Account">
+        select * from Ludens.db_account where id=#{id}
+    </select>
+</mapper>
